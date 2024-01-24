@@ -1,12 +1,12 @@
-this.firstName = 'Han';
-this.lastName = 'Ku';
+this.firstName = "Han";
+this.lastName = "Ku";
 const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    id: 5544,
-    fullName: function() {
-        return this.firstName + ' ' + this.lastName;
-    }
-}
+  firstName: "John",
+  lastName: "Doe",
+  id: 5544,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
 
-console.log(person.fullName());
+console.log(person.fullName()); // John Doe
