@@ -1,3 +1,4 @@
+// using closure ;
 function setColor(set) {
   let changeColor = set;
   return function () {
@@ -15,16 +16,16 @@ window.onload = function () {
 
 // other way :
 // function setColor(set) {
-//     let changeColor = set;
-//     if(changeColor) {
-//         let userColor = document.getElementById('color').value;
-//         document.getElementById('myPara').style.color = userColor;
-//     }
+//   let changeColor = set;
+//   if (changeColor) {
+//     let userColor = document.getElementById("color").value;
+//     document.getElementById("myPara").style.color = userColor;
+//   }
 // }
 
-// window.onload = function() {
-// let toggle = false;
-// document.getElementById('btn').onclick = function () {
-//     setColor(!toggle)
+// window.onload = function () {
+//   let toggle = true;
+//   document.getElementById("btn").onclick = function () {
+//     setColor(toggle);
+//   };
 // };
-// }
