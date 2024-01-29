@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <h2>Demo JavaScript in Body</h2>
+      <p id="demo">Placeholder ...</p>
+      <button type="button" onclick="myFunction()">Try it</button>
+    </div>
+  </body>
+  <!-- Because, earlier, the script in head tag was being loaded before than body tag.
+  so, the script cannot find element with "demo" Id, so we are getting that error -->
+  <script>
+    document.getElementById("demo").textContent = "A paragraph";
+    function myFunction() {
+      document.getElementById("demo").textContent =
+        "Paragraph changed after click.";
+    }
+  </script>
+</html>
+=======
     <link rel="stylesheet" href="../css/index.css">
     <script>
         document.getElementById("demo").textContent = "A paragraph";
@@ -20,3 +41,4 @@
 
 </body>
 </html>
+>>>>>>> main
