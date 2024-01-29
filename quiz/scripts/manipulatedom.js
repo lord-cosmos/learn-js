@@ -32,12 +32,12 @@ function addTable() {
       input_field.setAttribute("placeholder", "Enter Cell(x,y) ...")
       col1.replaceChild(input_field, col1.firstChild)
 
-
+      // on enter, I am replacign the input element with its value.
       input_field.addEventListener("keypress", function(event) {
         if (event.key == "Enter"){
           event.preventDefault();
           text_element = document.createTextNode(this.value)
-           col1.replaceChild( text_element,input_field)
+           col1.replaceChild(text_element,input_field)
         }
       })
     })
