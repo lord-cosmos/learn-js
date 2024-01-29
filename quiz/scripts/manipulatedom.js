@@ -35,7 +35,6 @@ function addTable() {
 
       input_field.addEventListener("keypress", function(event) {
         if (event.key == "Enter"){
-          console.log("pig")
           event.preventDefault();
           text_element = document.createTextNode(this.value)
            col1.replaceChild( text_element,input_field)
