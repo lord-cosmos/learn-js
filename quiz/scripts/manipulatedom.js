@@ -25,7 +25,24 @@ function addTable() {
   const tableNode = document.createElement("table");
   for(let i = 0; i < 3; i++) {
     let col1 = createTDNode(createTxtNode("Cell (" + i + ", 0)"));
-    tableNode.appendChild(createTRNode([col1]));
+    let button = document.createElement("button")
+    button.textContent = "Edit text"
+    button.addEventListener("click", () => {
+      input_field = document.createElement("input")
+      input_field.setAttribute("placeholder", "Enter Cell(x,y) ...")
+      col1.replaceChild(input_field, col1.firstChild)
+
+
+      input_field.addEventListener("keypress", function(event) {
+        if (event.key == "Enter"){
+          console.log("pig")
+          event.preventDefault();
+          text_element = document.createTextNode(this.value)
+           col1.replaceChild( text_element,input_field)
+        }
+      })
+    })
+    tableNode.appendChild(createTRNode([col1,button]));
   }
   document.getElementById("root").appendChild(tableNode);
 }

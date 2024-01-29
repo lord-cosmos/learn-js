@@ -1,6 +1,6 @@
 function logCells() {
   // Get all td elements inside the table within the div with id "root"
-  var tdElements = document.querySelectorAll('#root table tr td');
+  var tdElements = document.querySelectorAll('#root table tr td ');
   // Log the td elements
   tdElements.forEach(function(td, index) {
     console.log(` ==== Index === ${index}`);
