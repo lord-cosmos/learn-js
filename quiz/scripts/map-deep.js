@@ -6,7 +6,10 @@ const originalMatrix = [
   ];
   
   const newMatrix = originalMatrix.map((row) => {
-    return row.sort();
+    // fix :
+    // the row is again a reference type (list) therefore, both matrix are affected.
+    // so, we create new copy of the row also, like as follows.
+    return row.slice().sort(function(a,b) { return a-b});
   });
   
   // Modifying the original matrix (changing the last element of the first row)
