@@ -26,11 +26,12 @@
           try {
             x = Math.sqrt(number);
             if (isNaN(x)) {
-              throw "not a good number";
+              throw new TypeError("sqrt for negative number is undefined.");
             }
           } catch (err) {
-            console.log("Please provide a positive number");
-            return;
+            if (err instanceof TypeError) {
+              console.error(err.message);
+            }
           }
           return x;
         });
